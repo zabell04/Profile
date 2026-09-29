@@ -1,0 +1,168 @@
+/* ===================================================
+   RESET & VARIABEL WARNA (PALET BARU)
+   =================================================== */
+:root {
+  --midnight-indigo: #282B4A;
+  --vanilla-cream: #EEEBDA;
+  --indigo-light: #3a3e68;
+  --shadow-color: rgba(40, 43, 74, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--vanilla-cream);
+  color: var(--midnight-indigo);
+  min-height: 100vh;
+}
+
+/* ===================================================
+   1. PRINSIP CSS GRID (TATA LETAK HALAMAN)
+   =================================================== */
+.page-container {
+  display: grid;
+  place-items: center; /* Mengetengahkan kartu di tengah layar */
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* ===================================================
+   2. PRINSIP CSS FLEXBOX (TATA LETAK KARTU PROFIL)
+   =================================================== */
+.profile-card {
+  background-color: var(--midnight-indigo);
+  color: var(--vanilla-cream);
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px var(--shadow-color);
+  padding: 2.25rem 2rem;
+
+  /* Flexbox Vertikal: Menyusun bagian kartu dari atas ke bawah */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Flexbox Vertikal: Header Profil */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--vanilla-cream);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vanilla-cream);
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  background-color: var(--vanilla-cream);
+  color: var(--midnight-indigo);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+}
+
+/* Flexbox Vertikal: Body Profil */
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: var(--vanilla-cream);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Flexbox Horizontal: Kontainer Statistik */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background-color: var(--indigo-light);
+  border-radius: 12px;
+  border: 1px solid rgba(238, 235, 218, 0.15);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.stat-number {
+  font-weight: 700;
+  color: var(--vanilla-cream);
+  font-size: 1.15rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--vanilla-cream);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Flexbox Horizontal: Tombol Aksi */
+.profile-footer {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  flex: 1; /* Membuat kedua tombol membagi area sama besar */
+  text-align: center;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--vanilla-cream);
+  color: var(--midnight-indigo);
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--vanilla-cream);
+  border: 1.5px solid var(--vanilla-cream);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(238, 235, 218, 0.1);
+  transform: translateY(-2px);
+}
